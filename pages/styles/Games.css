@@ -117,15 +117,20 @@ body {
 }
 
 .search-form {
+    margin-top: 20px;
     display: flex;
-    gap: 0.5rem;
+    justify-content: center; /* Keep it centered */
 }
 
 .search-form input {
-    padding: 0.5rem;
+    padding: 10px;
+    width: 400px;
     border: 1px solid #ccc;
-    border-radius: 0.25rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-left: -380px; /* Move the input box to the left */
 }
+
 
 /* Adjust container to maintain layout */
 .container {
