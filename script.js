@@ -27,12 +27,12 @@ function renderGames(filter = '') {
         gameBox.className = 'game-box';
 
         const gameImg = document.createElement('img');
-        const imgSrc = `/covers/${game.name}.jpg`; // Assuming images are .jpg format
+        const imgSrc = game.image; // Assuming images are .jpg format
 
         // Handle missing image fallback
         gameImg.src = imgSrc;
         gameImg.onerror = () => {
-            gameImg.src = './images/missing.png'; // Fallback image if not found
+            gameImg.src = '../images/missing.png'; // Fallback image if not found
         };
 
         gameImg.alt = game.name;
@@ -52,9 +52,9 @@ function renderGames(filter = '') {
 // Handle game selection/deselection
 function toggleGameSelection(game) {
     const isSelected = [...selectedList.children].some(li => li.textContent === game.name);
-    
+
     const gameBox = [...gameGrid.children].find(box => box.querySelector('h3').textContent === game.name);
-    
+
     if (isSelected) {
         deselectGame(game, gameBox);
     } else {
@@ -72,7 +72,7 @@ function selectGame(game, gameBox) {
     listItem.addEventListener('click', () => deselectGame(game));
 
     selectedList.appendChild(listItem);
-    
+
     // Change the game box color to green when selected
     gameBox.style.backgroundColor = '#7700ff';  // Green
 }
@@ -80,18 +80,18 @@ function selectGame(game, gameBox) {
 // Remove game from the selected list
 function deselectGame(game, gameBox) {
     const listItem = [...selectedList.children].find(li => li.textContent === game.name);
-    
+
     if (listItem) {
         listItem.remove(); // Remove from the selected list
     }
-    
+
     // Change the game box color back to white when deselected
     gameBox.style.backgroundColor = '#FFFFFF';  // White
 }
 
 
 // Add an event listener to the search input field to filter games
-searchInput.addEventListener('input', function() {
+searchInput.addEventListener('input', function () {
     const searchValue = searchInput.value; // Get the search value
     renderGames(searchValue); // Render the games based on the search query
 });
