@@ -1,93 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SwitchIsland</title>
+    <title>SwitchIsland - Games</title>
     <link rel="stylesheet" href="../pages/styles/Games.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
 </head>
-
 <body>
-    <!-- Header Section with New Navbar -->
+    <!-- Header Section -->
     <header>
         <nav class="navbar">
-            <div class="container-fluid">
-                <!-- Left section: Logo and Links -->
-                <div class="navbar-left">
-                    <!-- Navbar brand/logo -->
-                    <a class="navbar-brand" href="../index.html">
-                        <img src="../images/logo.png" alt="Logo" class="logo">
-                    </a>
-                    <!-- Navigation links -->
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="../index.html">
-                                <i class="fas fa-home"></i><br>Home
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="fas fa-gamepad"></i><br>Games
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#">
-                                <i class="fas fa-ban"></i><br>Disabled
-                            </a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" onclick="toggleDropdown()">
-                                <i class="fas fa-ellipsis-h"></i><br>Dropdown
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
+            <div class="navbar-brand">
+                <a href="../index.html">
+                    <img src="../images/logo.png" alt="SwitchIsland Logo" class="logo">
+                </a>
+            </div>
+            <button class="navbar-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link active"><i class="fas fa-gamepad"></i> Games</a></li>
+                <li class="nav-item"><a href="#" class="nav-link disabled"><i class="fas fa-ban"></i> Disabled</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle"><i class="fas fa-ellipsis-h"></i> Dropdown</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="dropdown-item">Action</a></li>
+                        <li><a href="#" class="dropdown-item">Another Action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a href="#" class="dropdown-item">Something Else</a></li>
                     </ul>
-                </div>
-
-                <!-- Right section: Search form and additional buttons -->
-                <div class="navbar-right">
-                    <!-- New buttons to the left of the search box -->
-                    <ul class="navbar-nav navbar-right-links">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="fas fa-user"></i><br>About Me
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="fas fa-info-circle"></i><br>Info
-                            </a>
-                        </li>
-                    </ul>
-                    
-                </div>
+                </li>
+            </ul>
+            <div class="navbar-right">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-user"></i> About Me</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-info-circle"></i> Info</a></li>
+                </ul>
             </div>
         </nav>
     </header>
 
+    <!-- Text Section -->
     <div class="text-section">
         <h1>Switch Games</h1>
         <p>Select the games that you want to add to your cart for further actions.</p>
     </div>
 
- <!-- Search Form -->
- <form class="search-form">
-    <input type="search" id="searchInput" placeholder="Search for a game">
-</form>
+    <!-- Search Form -->
+    <form class="search-form">
+        <input type="search" id="searchInput" placeholder="Search for a game">
+    </form>
 
-    <!-- Main Content Section -->
+    <!-- Main Content -->
     <main>
         <div class="container">
             <div id="gameGrid" class="grid">
@@ -101,17 +68,22 @@
                 </ul>
             </div>
         </div>
-
     </main>
 
     <script>
+        // Toggle mobile navigation
+        const navbarToggle = document.querySelector('.navbar-toggle');
+        const navbarNav = document.querySelector('.navbar-nav');
+        navbarToggle.addEventListener('click', () => {
+            navbarNav.classList.toggle('active');
+        });
+
+        // Toggle dropdown menu
         function toggleDropdown() {
             const dropdown = document.querySelector(".dropdown-menu");
-            dropdown.style.display =
-                dropdown.style.display === "block" ? "none" : "block";
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
         }
     </script>
     <script type="module" src="../script.js"></script>
 </body>
-
 </html>

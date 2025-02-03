@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,74 +7,54 @@ body {
     background-size: 100% auto;
     background-attachment: scroll;
     color: #ffffff;
+    line-height: 1.6;
 }
 
-/* Navbar Styles */
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(37, 31, 31);
-    color: rgb(255, 255, 255);
-    padding: 0.5rem 1rem;
+    background-color: #1f1f1f;
+    padding: 1rem 2rem;
 }
 
-.container-fluid {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.navbar-left {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.navbar-brand {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    width: 300px;
+.navbar-brand .logo {
+    width: 150px;
     height: auto;
+}
+
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #e0e0e0;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 .navbar-nav {
     display: flex;
+    gap: 1.5rem;
     list-style: none;
-    padding: 0;
     margin: 0;
-    gap: 1rem;
+    padding: 0;
 }
 
-.nav-item {
-    text-align: center;
-}
-
-/* Navbar links and icons */
 .nav-link {
-    color: white;
+    color: #e0e0e0;
     text-decoration: none;
-    padding: 0.25rem 0;
-    display: block;
-    font-size: 0.8rem;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .nav-link i {
     font-size: 1.2rem;
-    margin-bottom: 0.5rem;
 }
 
 .nav-link:hover {
-    background-color: #444;
-}
-
-.nav-link.disabled {
-    color: gray;
-    cursor: not-allowed;
+    color: #ff5555;
 }
 
 .dropdown-menu {
@@ -81,15 +62,14 @@ body {
     position: absolute;
     background-color: #333;
     list-style: none;
-    margin-top: 0.5rem;
-    padding: 0;
-    border: 1px solid #444;
+    padding: 0.5rem;
+    border-radius: 5px;
 }
 
 .dropdown-item {
-    padding: 0.5rem;
-    color: white;
+    color: #e0e0e0;
     text-decoration: none;
+    padding: 0.5rem 1rem;
     display: block;
 }
 
@@ -97,139 +77,113 @@ body {
     background-color: #444;
 }
 
-.dropdown-divider {
-    height: 1px;
-    background-color: #555;
-    margin: 0.5rem 0;
+/* Text Section */
+.text-section {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 20px 0;
 }
 
-/* Right section: Search form and new buttons */
-.navbar-right {
-    display: flex;
-    align-items: center;
+.text-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #ff5555;
+    font-family: 'Press Start 2P', cursive;
 }
 
-.navbar-right-links {
-    display: flex;
-    gap: 1rem;
-    margin-right: 1rem;
-    /* Space between buttons and the search box */
+.text-section p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
 }
 
+/* Search Form */
 .search-form {
-    margin-top: 20px;
     display: flex;
-    justify-content: center; /* Keep it centered */
+    justify-content: center;
+    margin: 20px 0;
 }
 
 .search-form input {
     padding: 10px;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
-    margin-left: -380px; /* Move the input box to the left */
 }
 
-
-/* Adjust container to maintain layout */
+/* Main Content */
 .container {
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
     gap: 20px;
     padding: 20px;
-    /* Add spacing from the website edges */
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    /* 6 boxes per row */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
-    flex: 1;
-    /* Ensure the grid takes up remaining space */
 }
 
 .game-box {
-    background-color: #fff;
-    /* Default background */
-    border: 1px solid #ddd;
+    background-color: #333;
+    border: 1px solid #444;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
-    /* Add background-color transition */
-    aspect-ratio: 264 / 352;
-    /* Maintain aspect ratio */
-    padding: 10px;
-    /* Add some inner spacing */
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .game-box:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .game-box.selected {
     background-color: #7700ff;
-    /* Green when selected */
     border: 2px solid #ff5555;
-    box-shadow: 0 6px 12px rgba(255, 85, 85, 0.4);
 }
-
 
 .game-box img {
     width: 100%;
-    /* Scale image to fit width */
-    height: 100%;
-    /* Scale image to fit height */
-    object-fit: contain;
-    /* Maintain aspect ratio inside box */
-    object-position: center;
-    /* Center image if smaller than box */
+    height: auto;
+    object-fit: cover;
 }
 
 .game-box h3 {
     margin: 10px 0;
-    font-size: 16px;
-    color: #333;
+    font-size: 1rem;
+    color: #e0e0e0;
 }
 
+/* Selected Games Section */
 .selected-games {
-    position: sticky;
-    top: 20px;
-    /* Stay visible as you scroll */
-    margin-left: 20px;
-    width: 300px;
     background-color: #2c2a2a;
-    border: 1px solid #ddd;
+    border: 1px solid #444;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    font-family: Arial, sans-serif;
-    /* Match the rest of the site's font */
-    color: #ffffff;
-    /* Make text dark enough for visibility */
+    margin-top: 20px;
 }
 
 .selected-games h2 {
-    margin-top: 0;
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ff5555;
 }
 
 .selected-list {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
     margin: 0;
 }
 
 .selected-list li {
     padding: 10px;
-    border-bottom: 1px solid #ddd;
-    cursor: pointer;
+    border-bottom: 1px solid #444;
+    color: #e0e0e0;
     transition: background-color 0.3s;
 }
 
@@ -238,73 +192,35 @@ body {
 }
 
 .selected-list li:hover {
-    background-color: #f0f0f0;
+    background-color: #444;
 }
 
-.selected-list li.selected {
-    background-color: #ff5555;
-    /* Highlight selected games */
-    color: white;
-}
-
-.selected-list li.selected:hover {
-    background-color: #ff3333;
-    /* Darker on hover */
-}
-
-/* Global Text Section centering */
-.text-section {
-    margin: 20px 20px 0;
-    text-align: center;
-    color: #ffffff !important;
-    /* Force white color */
-    font-family: 'Press Start 2P', cursive;
-
-    /* Center the content using flexbox */
-    display: flex;
-    flex-direction: column;
-    /* Align items in a column */
-    justify-content: center;
-    /* Center horizontally */
-    align-items: center;
-    /* Center vertically */
-    height: 200px;
-    /* Optional: Take full viewport height */
-}
-
-.text-section h1 {
-    margin-bottom: 10px;
-    font-size: 2rem;
-    color: #ffffff !important;
-    /* Ensure title is white */
-}
-
-.text-section p {
-    margin: 0;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #ffffff !important;
-    /* Ensure subtitle is white */
-}
-
-/* Responsive Layout */
+/* Responsive Design */
 @media (max-width: 768px) {
-
-    .navbar-left,
-    .navbar-right {
+    .navbar-nav {
+        display: none;
         flex-direction: column;
-        align-items: flex-start;
+        width: 100%;
+        background-color: #1f1f1f;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .navbar-nav.active {
+        display: flex;
+    }
+
+    .navbar-toggle {
+        display: block;
     }
 
     .grid {
         grid-template-columns: repeat(2, 1fr);
-        /* Adjust grid to 2 columns on smaller screens */
     }
 
     .selected-games {
         width: 100%;
-        /* Full-width on smaller screens */
         margin-left: 0;
-        margin-right: 0;
     }
 }

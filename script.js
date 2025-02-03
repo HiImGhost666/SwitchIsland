@@ -8,12 +8,11 @@ const searchInput = document.getElementById('searchInput'); // Get the search in
 function renderGames(filter = '') {
     gameGrid.innerHTML = ''; // Clear the grid
 
-    // Check if games are properly imported
-    console.log(games); // Log the games array to the console
+    // Sort games alphabetically by name
+    const sortedGames = [...games].sort((a, b) => a.name.localeCompare(b.name));
 
     // Filter the games based on the search input
-    const filteredGames = games.filter(game => game.name.toLowerCase().includes(filter.toLowerCase()));
-    console.log(filteredGames); // Log the filtered games to see if filtering is working correctly
+    const filteredGames = sortedGames.filter(game => game.name.toLowerCase().includes(filter.toLowerCase()));
 
     // Check if there are any filtered games
     if (filteredGames.length === 0) {
@@ -88,7 +87,6 @@ function deselectGame(game, gameBox) {
     // Change the game box color back to white when deselected
     gameBox.style.backgroundColor = '#FFFFFF';  // White
 }
-
 
 // Add an event listener to the search input field to filter games
 searchInput.addEventListener('input', function () {
