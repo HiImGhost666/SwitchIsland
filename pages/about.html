@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - SwitchIsland</title>
+    <link rel="stylesheet" href="../pages/styles/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+     <!-- Header Section -->
+     <header>
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <img src="../images/logo.png" alt="SwitchIsland Logo" class="logo">
+            </div>
+            <button class="navbar-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="../index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                <li class="nav-item"><a href="../pages/Games.html" class="nav-link"><i class="fas fa-gamepad"></i> Games</a></li>
+                
+            </ul>
+            <div class="navbar-right">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="../pages/about.html" class="nav-link"><i class="fas fa-user"></i> About Us</a></li>
+                    <li class="nav-item"><a href="../pages/legal.html" class="nav-link"><i class="fas fa-info-circle"></i> Legal Disclaimer</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>About SwitchIsland</h1>
+                <p>Your ultimate destination for all things Nintendo Switch. Explore, buy, and customize your games!</p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section">
+            <h2>Our Story</h2>
+            <p>Welcome to <strong>SwitchIsland</strong>, a fictional project created by gamers, for gamers. Our mission is to make gaming more accessible and affordable for everyone. While the Mig Switch and its features are purely fictional, we aim to inspire creativity and innovation in the gaming community.</p>
+            <div class="team">
+                <h2>Meet the Team</h2>
+                <div class="team-members">
+                    <div class="team-member">
+                        <img src="../images/SuitCat.png" alt="Team Member 1">
+                        <h3>John Doe</h3>
+                        <p>Founder & CEO</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="../images/SuitCat.png" alt="Team Member 2">
+                        <h3>Jane Smith</h3>
+                        <p>Lead Developer</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="../images/SuitCat.png" alt="Team Member 3">
+                        <h3>Mike Johnson</h3>
+                        <p>Creative Director</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 SwitchIsland. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle mobile navigation
+        const navbarToggle = document.querySelector('.navbar-toggle');
+        const navbarNav = document.querySelector('.navbar-nav');
+        navbarToggle.addEventListener('click', () => {
+            navbarNav.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
