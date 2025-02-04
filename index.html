@@ -3,110 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SwitchIsland</title>
+    <title>SwitchIsland - Home</title>
     <link rel="stylesheet" href="pages/styles/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header Section -->
     <header>
         <nav class="navbar">
             <div class="navbar-brand">
-                <img src="images/logo.png" alt="SwitchIsland Logo" class="logo">
+                <img src="../images/logo.png" alt="SwitchIsland Logo" class="logo">
             </div>
             <button class="navbar-toggle" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
             <ul class="navbar-nav">
-                <li class="nav-item"><a href="#" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
-                <li class="nav-item"><a href="pages/Games.html" class="nav-link"><i class="fas fa-gamepad"></i> Games</a></li>
-            
+                <li class="nav-item"><a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                <li class="nav-item"><a href="../pages/Games.html" class="nav-link"><i class="fas fa-gamepad"></i> Games</a></li>
             </ul>
             <div class="navbar-right">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a href="pages/about.html" class="nav-link"><i class="fas fa-user"></i> About Us</a></li>
-                    <li class="nav-item"><a href="pages/legal.html" class="nav-link"><i class="fas fa-info-circle"></i> Legal Disclaimer</a></li>
+                    <li class="nav-item"><a href="../pages/about.html" class="nav-link active"><i class="fas fa-info-circle"></i> What is the Mig Switch?</a></li>
+                    <li class="nav-item"><a href="../pages/legal.html" class="nav-link"><i class="fas fa-balance-scale"></i> Legal</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <section class="hero-section">
-            <div class="hero-content">
-                <h1>Welcome to SwitchIsland</h1>
-                <p>Your ultimate destination for all things Nintendo Switch. Explore, buy, and customize your games!</p>
-                <a href="#mig-switch" class="btn-cta">Discover the Mig Switch</a>
-            </div>
-        </section>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Welcome to SwitchIsland</h1>
+            <p>Your ultimate destination for all things Nintendo Switch. Explore, buy, and customize your games!</p>
+            <a href="#mig-switch" class="btn-cta">Discover the Mig Switch</a>
+        </div>
+        <div class="hero-overlay"></div>
+        <video autoplay muted loop class="hero-video">
+            <source src="videos/hero-bg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
 
-        <section id="mig-switch" class="product-section">
-            <h2>The Mig Switch</h2>
-            <div class="product-container">
-                <img src="images/mig-switch.png" alt="Mig Switch" class="product-image">
-                <div class="product-description">
-                    <h3>Unlock a New Level of Gaming</h3>
-                    <p>The Mig Switch is a revolutionary product that lets you take your Nintendo Switch to the next level.</p>
-                    <a href="#" class="btn-cta">Learn More</a>
-                </div>
+    <!-- Product Section -->
+    <section id="mig-switch" class="product-section">
+        <div class="product-container">
+            <div class="product-image">
+                <img src="images/mig-switch.png" alt="Mig Switch">
             </div>
-        </section>
-
-        <!-- Features Section -->
-        <section class="features">
-            <h2>Features of the Mig Switch</h2>
-            <div class="feature-cards">
-                <div class="feature-card">
-                    <i class="fas fa-gamepad"></i>
-                    <h3>Preloaded Games</h3>
-                    <p>Get your favorite games preinstalled with the Mig Switch, ready for instant play.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-share-alt"></i>
-                    <h3>Seamless Sharing</h3>
-                    <p>Share your game library with friends, family, or others easily with the Mig Switch.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-plug"></i>
-                    <h3>Universal Compatibility</h3>
-                    <p>Works with all versions, firmware, and variants, the Mig Switch module adapts perfectly.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-tools"></i>
-                    <h3>Easy Handling</h3>
-                    <p>No complicated installation required. Simply insert the Mig Switch module and start playing immediately.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-box"></i>
-                    <h3>No Console Modifications Needed</h3>
-                    <p>The console does not need to be modified with any kind of chip or software.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-hdd"></i>
-                    <h3>One Cartridge for All Your Games</h3>
-                    <p>Carry all your games conveniently on a single memory card, so you have your entire collection at hand at all times.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-code"></i>
-                    <h3>Development Tool</h3>
-                    <p>Ideal for developers who want to test new features and games.</p>
-                </div>
+            <div class="product-description">
+                <h2>The Mig Switch</h2>
+                <h3>Unlock a New Level of Gaming</h3>
+                <p>The Mig Switch is a revolutionary product that lets you take your Nintendo Switch to the next level. With preloaded games, customization options, and more, it brings convenience and excitement to your fingertips.</p>
+                <a href="#" class="btn-cta">Learn More</a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- About Section -->
-        <section class="about">
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Features of the Mig Switch</h2>
+        <div class="feature-cards">
+            <div class="feature-card">
+                <i class="fas fa-gamepad"></i>
+                <h3>Preloaded Games</h3>
+                <p>Get your favorite games preinstalled with the Mig Switch, ready for instant play.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-share-alt"></i>
+                <h3>Seamless Sharing</h3>
+                <p>Share your game library with friends, family, or others easily with the Mig Switch.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-plug"></i>
+                <h3>Universal Compatibility</h3>
+                <p>Works with all versions, firmware, and variants, the Mig Switch module adapts perfectly.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-tools"></i>
+                <h3>Easy Handling</h3>
+                <p>No complicated installation required. Simply insert the Mig Switch module and start playing immediately.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-box"></i>
+                <h3>No Console Modifications Needed</h3>
+                <p>The console does not need to be modified with any kind of chip or software.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-hdd"></i>
+                <h3>One Cartridge for All Your Games</h3>
+                <p>Carry all your games conveniently on a single memory card, so you have your entire collection at hand at all times.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-code"></i>
+                <h3>Development Tool</h3>
+                <p>Ideal for developers who want to test new features and games.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="about-content">
             <h2>About SwitchIsland</h2>
-            <p>SwitchIsland is dedicated to providing the best gaming experience for Nintendo Switch enthusiasts.</p>
-        </section>
-    </main>
+            <p>SwitchIsland is dedicated to providing the best gaming experience for Nintendo Switch enthusiasts. We offer the latest products, custom mods, and more!</p>
+            <a href="pages/about.html" class="btn-cta">Learn More</a>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
         <div class="footer-content">
+            <div class="footer-section">
+                <h3>SwitchIsland</h3>
+                <p>Your ultimate destination for all things Nintendo Switch.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="../pages/Games.html">Games</a></li>
+                    <li><a href="../pages/about.html">About Us</a></li>
+                    <li><a href="../pages/legal.html">Legal</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
             <p>&copy; 2025 SwitchIsland. All rights reserved.</p>
+            <p><small>SwitchIsland is a fictional project for educational purposes. This website is not affiliated with Nintendo or the creators of the Mig Switch.</small></p>
+            <p><a href="../pages/PrivacyPolicy.html">Privacy Policy</a> | <a href="../pages/TermsOfUse.html">Terms of Use</a></p>
         </div>
     </footer>
 
