@@ -6,18 +6,16 @@
     <title>SwitchIsland - Home</title>
     <link rel="stylesheet" href="pages/styles/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
-    <!-- Header Section -->
     <header>
         <nav class="navbar">
             <div class="navbar-brand">
                 <img src="../images/logo.png" alt="SwitchIsland Logo" class="logo">
             </div>
-            <button class="navbar-toggle" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
+           
             <ul class="navbar-nav">
                 <li class="nav-item"><a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
                 <li class="nav-item"><a href="../pages/Games.html" class="nav-link"><i class="fas fa-gamepad"></i> Games</a></li>
@@ -30,125 +28,272 @@
             </div>
         </nav>
     </header>
-
     <!-- Hero Section -->
     <section class="hero-section">
-        <div class="hero-content">
-            <h1>Welcome to SwitchIsland</h1>
-            <p>Your ultimate destination for all things Nintendo Switch. Explore, buy, and customize your games!</p>
-            <a href="#mig-switch" class="btn-cta">Discover the Mig Switch</a>
+        <div class="hero-video">
+            <video autoplay muted loop playsinline>
+                <source src="../videos/switch-hero.mp4" type="video/mp4">
+            </video>
         </div>
         <div class="hero-overlay"></div>
-        <video autoplay muted loop class="hero-video">
-            <source src="videos/hero-bg.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <div class="hero-content">
+            <h1 class="animate__animated animate__fadeInDown">Welcome to SwitchIsland</h1>
+            <p class="animate__animated animate__fadeInUp animate__delay-1s">Your ultimate destination for all things Nintendo Switch. Explore, buy, and customize your games!</p>
+            <div class="hero-buttons animate__animated animate__fadeInUp animate__delay-2s">
+                <a href="#mig-switch" class="btn-cta pulse">Discover the Mig Switch</a>
+                <a href="../pages/Games.html" class="btn-secondary">Browse Games</a>
+            </div>
+        </div>
+        <div class="scroll-indicator animate__animated animate__bounce animate__infinite animate__delay-3s">
+            <i class="fas fa-chevron-down"></i>
+        </div>
     </section>
 
     <!-- Product Section -->
     <section id="mig-switch" class="product-section">
         <div class="product-container">
-            <div class="product-image">
-                <img src="images/mig-switch.png" alt="Mig Switch">
+            <div class="product-image wow animate__animated animate__fadeInLeft">
+                <img src="../images/mig-switch.png" alt="Mig Switch" class="product-img">
+                <div class="product-badge">New</div>
             </div>
-            <div class="product-description">
+            <div class="product-description wow animate__animated animate__fadeInRight">
+                <span class="section-tag">Revolutionary Technology</span>
                 <h2>The Mig Switch</h2>
                 <h3>Unlock a New Level of Gaming</h3>
                 <p>The Mig Switch is a revolutionary product that lets you take your Nintendo Switch to the next level. With preloaded games, customization options, and more, it brings convenience and excitement to your fingertips.</p>
-                <a href="#" class="btn-cta">Learn More</a>
+                <div class="product-features">
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Works with all Switch models</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>No console modifications</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Easy plug-and-play</span>
+                    </div>
+                </div>
+                <div class="product-actions">
+                    <a href="../pages/about.html" class="btn-cta">Learn More</a>
+                    <a href="#" class="btn-video">
+                        <i class="fas fa-play"></i>
+                        Watch Demo
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
     <section class="features">
-        <h2>Features of the Mig Switch</h2>
+        <div class="section-header wow animate__animated animate__fadeInUp">
+            <span class="section-tag">Why Choose Mig Switch</span>
+            <h2>Features of the Mig Switch</h2>
+            <p>Experience gaming like never before with these incredible features</p>
+        </div>
         <div class="feature-cards">
-            <div class="feature-card">
-                <i class="fas fa-gamepad"></i>
+            <div class="feature-card wow animate__animated animate__fadeInUp" data-wow-delay="0.1s">
+                <div class="card-icon">
+                    <i class="fas fa-gamepad"></i>
+                </div>
                 <h3>Preloaded Games</h3>
                 <p>Get your favorite games preinstalled with the Mig Switch, ready for instant play.</p>
             </div>
-            <div class="feature-card">
-                <i class="fas fa-share-alt"></i>
+            <div class="feature-card wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                <div class="card-icon">
+                    <i class="fas fa-share-alt"></i>
+                </div>
                 <h3>Seamless Sharing</h3>
                 <p>Share your game library with friends, family, or others easily with the Mig Switch.</p>
             </div>
-            <div class="feature-card">
-                <i class="fas fa-plug"></i>
+            <div class="feature-card wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                <div class="card-icon">
+                    <i class="fas fa-plug"></i>
+                </div>
                 <h3>Universal Compatibility</h3>
                 <p>Works with all versions, firmware, and variants, the Mig Switch module adapts perfectly.</p>
             </div>
-            <div class="feature-card">
-                <i class="fas fa-tools"></i>
+            <div class="feature-card wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+                <div class="card-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
                 <h3>Easy Handling</h3>
                 <p>No complicated installation required. Simply insert the Mig Switch module and start playing immediately.</p>
             </div>
-            <div class="feature-card">
-                <i class="fas fa-box"></i>
+            <div class="feature-card wow animate__animated animate__fadeInUp" data-wow-delay="0.5s">
+                <div class="card-icon">
+                    <i class="fas fa-box"></i>
+                </div>
                 <h3>No Console Modifications Needed</h3>
                 <p>The console does not need to be modified with any kind of chip or software.</p>
             </div>
-            <div class="feature-card">
-                <i class="fas fa-hdd"></i>
+            <div class="feature-card wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
+                <div class="card-icon">
+                    <i class="fas fa-hdd"></i>
+                </div>
                 <h3>One Cartridge for All Your Games</h3>
                 <p>Carry all your games conveniently on a single memory card, so you have your entire collection at hand at all times.</p>
-            </div>
-            <div class="feature-card">
-                <i class="fas fa-code"></i>
-                <h3>Development Tool</h3>
-                <p>Ideal for developers who want to test new features and games.</p>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about">
-        <div class="about-content">
-            <h2>About SwitchIsland</h2>
-            <p>SwitchIsland is dedicated to providing the best gaming experience for Nintendo Switch enthusiasts. We offer the latest products, custom mods, and more!</p>
-            <a href="pages/about.html" class="btn-cta">Learn More</a>
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="section-header wow animate__animated animate__fadeInUp">
+            <span class="section-tag">Community Feedback</span>
+            <h2>What Gamers Say</h2>
+            <p>Hear from our satisfied customers</p>
+        </div>
+        <div class="testimonial-slider">
+            <div class="testimonial-card wow animate__animated animate__fadeIn">
+                <div class="testimonial-content">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"The Mig Switch completely transformed my gaming experience. Now I can carry all my games in one place!"</p>
+                </div>
+                <div class="testimonial-author">
+                    <img src="../images/user1.jpg" alt="User">
+                    <div>
+                        <h4>Alex Johnson</h4>
+                        <span>Professional Gamer</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card wow animate__animated animate__fadeIn">
+                <div class="testimonial-content">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>"As a developer, this has been invaluable for testing my games across different Switch models."</p>
+                </div>
+                <div class="testimonial-author">
+                    <img src="../images/user2.jpg" alt="User">
+                    <div>
+                        <h4>Sarah Williams</h4>
+                        <span>Game Developer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-container wow animate__animated animate__zoomIn">
+            <h2>Ready to Elevate Your Gaming Experience?</h2>
+            <p>Join thousands of satisfied gamers who have already discovered the power of Mig Switch</p>
+            <div class="cta-buttons">
+                <a href="../pages/Games.html" class="btn-cta btn-large">Browse Games</a>
+                <a href="../pages/about.html" class="btn-secondary btn-large">Learn More</a>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="footer-section">
-                <h3>SwitchIsland</h3>
+            <div class="footer-section wow animate__animated animate__fadeIn">
+                <img src="../images/logo.png" alt="SwitchIsland Logo" class="footer-logo">
                 <p>Your ultimate destination for all things Nintendo Switch.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
             </div>
-            <div class="footer-section">
+            <div class="footer-section wow animate__animated animate__fadeIn" data-wow-delay="0.1s">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
                     <li><a href="../pages/Games.html">Games</a></li>
                     <li><a href="../pages/about.html">About Us</a></li>
                     <li><a href="../pages/legal.html">Legal</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
-                <h3>Follow Us</h3>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-discord"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
+            <div class="footer-section wow animate__animated animate__fadeIn" data-wow-delay="0.2s">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section wow animate__animated animate__fadeIn" data-wow-delay="0.3s">
+                <h3>Newsletter</h3>
+                <p>Subscribe to get updates on new games and offers</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit">Subscribe</button>
+                </form>
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2025 SwitchIsland. All rights reserved.</p>
             <p><small>SwitchIsland is a fictional project for educational purposes. This website is not affiliated with Nintendo or the creators of the Mig Switch.</small></p>
-            <p><a href="../pages/PrivacyPolicy.html">Privacy Policy</a> | <a href="../pages/TermsOfUse.html">Terms of Use</a></p>
+            <div class="legal-links">
+                <a href="../pages/PrivacyPolicy.html">Privacy Policy</a>
+                <span>|</span>
+                <a href="../pages/TermsOfUse.html">Terms of Use</a>
+            </div>
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top animate__animated animate__fadeInUp">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script>
-        // Toggle mobile navigation
+        // Initialize WOW.js for animations
+        new WOW().init();
+        
+        // Mobile navigation toggle
         const navbarToggle = document.querySelector('.navbar-toggle');
         const navbarNav = document.querySelector('.navbar-nav');
         navbarToggle.addEventListener('click', () => {
             navbarNav.classList.toggle('active');
+            navbarToggle.classList.toggle('active');
+        });
+
+        // Sticky header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.sticky-header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Back to top button
+        const backToTopButton = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
         });
     </script>
 </body>
